@@ -39,7 +39,7 @@ A comprehensive time tracking application with React/Next.js frontend and NestJS
 
    d. Create a `.env.local` file in the `nextjs-app` directory with the following content:
    ```
-   NEXT_PUBLIC_API_URL=http://localhost:3000
+   NEXT_PUBLIC_API_URL=http://localhost:3005
    ```
 
    e. Start the frontend development server:
@@ -47,7 +47,7 @@ A comprehensive time tracking application with React/Next.js frontend and NestJS
    npm run dev
    ```
 
-5. The backend API will be accessible at [http://localhost:3000/](http://localhost:3000/)
+5. The backend API will be accessible at [http://localhost:3005/](http://localhost:3005/)
 6. The frontend will be accessible at [http://localhost:3001/](http://localhost:3001/) (or the next available port)
 
 ### Option 2: Development Setup (Manual)
@@ -71,12 +71,12 @@ A comprehensive time tracking application with React/Next.js frontend and NestJS
    - Install dependencies: `npm install`
    - Create a `.env.local` file in the `nextjs-app` directory with the following content:
      ```
-     NEXT_PUBLIC_API_URL=http://localhost:3000
+     NEXT_PUBLIC_API_URL=http://localhost:3005
      ```
    - Start the frontend: `npm run dev`
    - The frontend will be running on [http://localhost:3001/](http://localhost:3001/) (or the next available port)
 
-3. Access the application at [http://localhost:3001/](http://localhost:3001/) (frontend) with the backend API at [http://localhost:3000/](http://localhost:3000/)
+3. Access the application at [http://localhost:3001/](http://localhost:3001/) (frontend) with the backend API at [http://localhost:3005/](http://localhost:3005/)
 
 ## Available Scripts
 
@@ -105,7 +105,7 @@ A comprehensive time tracking application with React/Next.js frontend and NestJS
 - `DB_PASSWORD` - PostgreSQL password
 
 #### Frontend (nextjs-app/.env.local)
-- `NEXT_PUBLIC_API_URL` - Backend API URL (e.g., http://localhost:3000)
+- `NEXT_PUBLIC_API_URL` - Backend API URL (e.g., http://localhost:3005)
 
 ## Troubleshooting
 
