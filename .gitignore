@@ -40,8 +40,7 @@ config/local.*
 *.backup
 
 # Docker
-docker-compose.override.yml
-.volumes/
+
 
 # Secrets
 secrets/
