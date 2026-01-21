@@ -45,6 +45,8 @@ export default function EntryHistory() {
     (a, b) => new Date(b).getTime() - new Date(a).getTime(),
   );
 
+  console.log({grandTotal});
+
   return (
     <div className="glass-card rounded-2xl">
       <div className="flex justify-between items-center mb-4">
@@ -79,7 +81,7 @@ export default function EntryHistory() {
                     {dayjs(date).format("MMMM D, YYYY")}
                   </Text>
                   <Tag color="blue" className="ios-input">
-                    Total: {(Number(grandTotal) || 0).toFixed(2)}hrs
+                    Total: {(Number(dailyTotals[date]) || 0).toFixed(2)}hrs
                   </Tag>
                 </div>
               }

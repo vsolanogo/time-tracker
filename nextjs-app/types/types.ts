@@ -1,0 +1,7 @@
+
+export enum WebGLButtonStyle {
+  PLASMA = 'PLASMA',
+  NEON_PULSE = 'NEON_PULSE',
+  PARTICLE_FIELD = 'PARTICLE_FIELD',
+  SCAN_LINE = 'SCAN_LINE'
+}

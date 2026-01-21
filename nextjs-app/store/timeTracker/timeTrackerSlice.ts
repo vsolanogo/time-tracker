@@ -135,10 +135,11 @@ export const timeTrackerSlice = createSlice({
         let grandTotal = 0;
 
         action.payload.forEach(entry => {
+          const hoursAsNumber = Number(entry.hours);
           if (!dailyTotals[entry.date]) {
             dailyTotals[entry.date] = 0;
           }
-          dailyTotals[entry.date] += entry.hours;
+          dailyTotals[entry.date] += hoursAsNumber;
         });
 
         grandTotal = Object.values(dailyTotals).reduce((sum, dayTotal) => sum + dayTotal, 0);
@@ -156,11 +157,12 @@ export const timeTrackerSlice = createSlice({
         state.error = null;
 
         // Update daily totals
+        const hoursAsNumber = Number(action.payload.hours);
         if (!state.dailyTotals[action.payload.date]) {
           state.dailyTotals[action.payload.date] = 0;
         }
-        state.dailyTotals[action.payload.date] += action.payload.hours;
-        state.grandTotal += action.payload.hours;
+        state.dailyTotals[action.payload.date] += hoursAsNumber;
+        state.grandTotal += hoursAsNumber;
       })
       .addCase(createTimeEntry.rejected, (state, action) => {
         state.error = action.payload as string;
@@ -171,11 +173,14 @@ export const timeTrackerSlice = createSlice({
         if (index !== -1) {
           // Update daily totals by subtracting old hours and adding new hours
           const oldEntry = state.timeEntries[index];
-          state.dailyTotals[oldEntry.date] -= oldEntry.hours;
-          state.dailyTotals[action.payload.date] = (state.dailyTotals[action.payload.date] || 0) + action.payload.hours;
+          const oldHoursAsNumber = Number(oldEntry.hours);
+          const newHoursAsNumber = Number(action.payload.hours);
+
+          state.dailyTotals[oldEntry.date] -= oldHoursAsNumber;
+          state.dailyTotals[action.payload.date] = (state.dailyTotals[action.payload.date] || 0) + newHoursAsNumber;
 
           // Update grand total
-          state.grandTotal = state.grandTotal - oldEntry.hours + action.payload.hours;
+          state.grandTotal = state.grandTotal - oldHoursAsNumber + newHoursAsNumber;
 
           state.timeEntries[index] = action.payload;
         }
@@ -189,13 +194,14 @@ export const timeTrackerSlice = createSlice({
         const deletedEntry = state.timeEntries.find(entry => entry.id === action.payload);
         if (deletedEntry) {
           // Update daily totals
-          state.dailyTotals[deletedEntry.date] -= deletedEntry.hours;
+          const hoursAsNumber = Number(deletedEntry.hours);
+          state.dailyTotals[deletedEntry.date] -= hoursAsNumber;
           if (state.dailyTotals[deletedEntry.date] <= 0) {
             delete state.dailyTotals[deletedEntry.date];
           }
 
           // Update grand total
-          state.grandTotal -= deletedEntry.hours;
+          state.grandTotal -= hoursAsNumber;
         }
 
         state.timeEntries = state.timeEntries.filter(entry => entry.id !== action.payload);

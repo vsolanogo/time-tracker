@@ -5,7 +5,7 @@ import { useAppSelector, useAppDispatch } from '@/store/hooks';
 import { createTimeEntry } from '@/store/timeTracker/timeTrackerSlice';
 import { Project } from '@/types/timeTracker';
 import { Button, DatePicker, Form, Input, InputNumber, Select, Space } from 'antd';
-import { ClockCircleOutlined, CalendarOutlined, BookOutlined, EditOutlined } from '@ant-design/icons';
+import { ClockCircleOutlined, CalendarOutlined, BookOutlined, EditOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
 import dayjs from 'dayjs';
 
 interface TimeEntryFormData {
@@ -45,14 +45,12 @@ export default function TimeEntryForm({ projects }: TimeEntryFormProps) {
       </h2>
 
       {error && (
-        <div className="mb-4 bg-red-100/30 backdrop-blur-sm border border-red-400/30 text-red-700 px-4 py-3 rounded-xl relative glass-card" role="alert">
+        <div className="mb-4 bg-red-100/30 backdrop-blur-sm border border-red-400/30 text-red-700 px-4 py-3 rounded-xl relative glass-card ios-input" role="alert">
           <div className="flex items-start">
-            <svg className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-            </svg>
+            <ExclamationCircleOutlined className="text-red-500 mr-2 mt-0.5 flex-shrink-0 text-lg" />
             <div>
-              <strong className="font-bold">Error! </strong>
-              <span className="block mt-1">{error}</span>
+              <strong className="font-bold ios-input">Error! </strong>
+              <span className="block mt-1 ios-input">{error}</span>
             </div>
           </div>
         </div>
