@@ -5,13 +5,6 @@ node_modules/
 .next/
 /out/
 
-# Environment variables
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env
-
 # IDE files
 .vscode/
 .idea/
@@ -84,10 +77,6 @@ dist/
 # TypeScript next-env file
 next-env.d.ts
 
-# local env files
-.env.local
-.env.production.local
-.env.development.local
 
 # Next.js cache
 .cache/
