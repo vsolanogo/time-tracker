@@ -12,45 +12,8 @@ A comprehensive time tracking application with React/Next.js frontend and NestJS
 
 ## Getting Started
 
-### Option 1: Docker Setup (Recommended)
 
-1. Make sure you have Docker and Docker Compose installed on your system.
-
-2. Clone the repository and navigate to the project root directory.
-
-3. The docker-compose.yml sets up the backend service to run on port 3000.
-
-4. To run the complete application with both backend and frontend:
-
-   a. Start the backend API service:
-   ```bash
-   docker-compose up --build
-   ```
-
-   b. In a separate terminal, navigate to the `nextjs-app` directory:
-   ```bash
-   cd nextjs-app
-   ```
-
-   c. Install frontend dependencies:
-   ```bash
-   npm install
-   ```
-
-   d. Create a `.env.local` file in the `nextjs-app` directory with the following content:
-   ```
-   NEXT_PUBLIC_API_URL=http://localhost:3005
-   ```
-
-   e. Start the frontend development server:
-   ```bash
-   npm run dev
-   ```
-
-5. The backend API will be accessible at [http://localhost:3005/](http://localhost:3005/)
-6. The frontend will be accessible at [http://localhost:3001/](http://localhost:3001/) (or the next available port)
-
-### Option 2: Development Setup (Manual)
+### Option 1: Development Setup (Manual)
 
 #### Prerequisites
 - Node.js 18+
@@ -130,4 +93,41 @@ docker rm $(docker ps -a -q)
 - `nextjs-app/` - Frontend application built with Next.js
 - `docker-compose.yml` - Docker Compose configuration for running the entire application stack
 
-![db](db-shema.png)
+
+### Option 2: Docker Setup (Recommended)
+
+1. Make sure you have Docker and Docker Compose installed on your system.
+
+2. Clone the repository and navigate to the project root directory.
+
+3. The docker-compose.yml sets up the backend service to run on port 3000.
+
+4. To run the complete application with both backend and frontend:
+
+   a. Start the backend API service:
+   ```bash
+   docker-compose up --build
+   ```
+
+   b. In a separate terminal, navigate to the `nextjs-app` directory:
+   ```bash
+   cd nextjs-app
+   ```
+
+   c. Install frontend dependencies:
+   ```bash
+   npm install
+   ```
+
+   d. Create a `.env.local` file in the `nextjs-app` directory with the following content:
+   ```
+   NEXT_PUBLIC_API_URL=http://localhost:3005
+   ```
+
+   e. Start the frontend development server:
+   ```bash
+   npm run dev
+   ```
+
+5. The backend API will be accessible at [http://localhost:3005/](http://localhost:3005/)
+6. The frontend will be accessible at [http://localhost:3001/](http://localhost:3001/) (or the next available port)
