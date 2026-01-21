@@ -5,7 +5,7 @@ services:
       context: ./nestjs
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "3005:3000"
     depends_on:
       - db
     restart: always
