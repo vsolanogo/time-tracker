@@ -27,7 +27,7 @@ A comprehensive time tracking application with React/Next.js frontend and NestJS
    - Install dependencies: `npm install`
    - Set up your PostgreSQL database and configure the connection in `.env.development`
    - Start the backend: `npm run start:dev`
-   - The API will be running on [http://localhost:3000/](http://localhost:3000/)
+   - The API will be running on [http://localhost:3005/](http://localhost:3005/)
 
 2. **Set up the frontend (Next.js)**:
    - Navigate to the `nextjs-app` directory: `cd nextjs-app`
