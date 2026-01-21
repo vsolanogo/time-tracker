@@ -1,0 +1,66 @@
+# Project-wide ignores
+node_modules/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.vscode/
+
+# Database dumps
+*.sql
+*.dump
+*.db
+
+# Local configuration
+config/local.*
+
+# Backup files
+*~
+*.bak
+*.backup
+
+# Docker
+docker-compose.override.yml
+.volumes/
+
+# Secrets
+secrets/
+*.key
+*.pem
+*.crt
+*.cert
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Batch files for database management
+*.bat
+create_db.bat
+drop_db.bat
+dump_schema.bat
+list_tables.bat
+
+# Docker volumes and data
+postgres-data/
+volumes/

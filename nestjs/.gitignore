@@ -1,0 +1,137 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Production build
+dist/
+dist-ssr/
+public/dist/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.staging
+.env.backup
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing
+coverage
+.nyc_output
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Debug
+debug.log
+*.log
+
+# Memory dumps
+*.dump
+*.heap
+*.profile
+*.orig
+
+# Temporary folders
+tmp/
+temp/
+
+# Production specific
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeDoc output
+docs/
+
+# Remotedev
+.remotedev/
+
+# Jest
+junit.xml
+
+# Docker
+.dockerignore
+
+# Database
+*.db
+*.db-journal
+
+# Sensitive files
+secrets/
+config/secrets.*
+
+# Local configuration
+config/local.*
+
+# Backup files
+*~
+*.bak
+*.backup
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Lock files
+yarn.lock
+pnpm-lock.yaml
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Prisma
+prisma/migrations/
+prisma/schema.prisma.backup
+
+# TypeORM
+ormconfig.json
+
+# ESLint
+eslintcache
+
+# Prettier
+prettierignore
+
+# Postgres data
+postgres-data/
+
+# Docker volumes
+volumes/
+
+# Local development
+.env.docker
+.env.development
