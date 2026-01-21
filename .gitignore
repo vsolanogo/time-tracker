@@ -54,13 +54,6 @@ secrets/
 .DS_Store
 Thumbs.db
 
-# Batch files for database management
-*.bat
-create_db.bat
-drop_db.bat
-dump_schema.bat
-list_tables.bat
-
 # Docker volumes and data
 postgres-data/
 volumes/
